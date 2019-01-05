@@ -17,7 +17,7 @@
     {{ block "nav" . }}
     <nav class="navbar navbar-expand-md navbar-light bg-light static-top">
         <div class="container">
-            <a class="navbar-brand" href="#">MXSHAO Apps</a>
+            <a class="navbar-brand" href='{{ "" | absURL }}'>MXSHAO Apps</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -39,8 +39,11 @@
     {{ block "main" . }}
     {{ end }}
     {{ block "footer" . }}
-
+        <footer class="footer bg-light">
+            <div class="text-center font-italic">Copyright &copy; 2019 mxshao.com</div>
+        </footer>
     {{ end }}
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

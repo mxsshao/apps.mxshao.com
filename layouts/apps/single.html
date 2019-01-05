@@ -1,0 +1,50 @@
+{{ define "main" }}
+<main role="main" class="container" id="page-single">
+    <div class="row">
+        <div class="col">
+            <h2 class="text-center pt-4">{{ .Title }}</h2>
+        </div>
+    </div>
+    <div class="row pt-4">
+        <div class="col-10 col-sm-4 offset-1 offset-sm-0 mb-4">
+            <div class="card">
+                <div id="carouselExampleControls" class="carousel slide card-img-top" data-ride="carousel" data-interval="3000">
+                    <div class="carousel-inner">
+                        {{ range $index, $value := .Params.screenshots }}
+                            <div class="carousel-item {{ if (eq $index 0) }}active{{ end }}">
+                                <img src="{{ $value | absURL }}" class="card-img-top" alt="">
+                            </div>
+                        {{ end }}
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">
+                        <span class="badge badge-info">{{ .Params.app_type }}</span>
+                    </h5>
+                    <p class="card-text">{{ .Params.description }}</p>
+                    <p class="card-text">{{ .Params.description_extend | safeHTML }}</p>
+                    <a href="{{ .Params.github }}"><i class="fab fa-github"></i> Github</a>
+                </div>
+                <a href="{{ .Params.download_link }}" class="btn btn-light">View in Fitbit Gallery</a>
+            </div>
+        </div>
+        <div class="col col-sm-8 mb-4">
+            <h3 class="text-center pb-2 pt-2 font-weight-normal">FAQ</h3>
+            <div class="accordion" id="faq-accordion">
+                {{ range $index, $value := .Params.faq }}
+                    <div class="card">
+                        <button class="btn btn-link card-header text-left" id="h-{{ $index }}" type="button" data-toggle="collapse" data-target="#c-{{ $index }}" aria-expanded="false" aria-controls="c-{{ $index }}">
+                            {{ .question }}
+                        </button>
+                        <div id="c-{{ $index }}" class="collapse" aria-labelledby="h-{{ $index }}" data-parent="#faq-accordion">
+                            <div class="card-body">
+                                {{ .answer }}
+                            </div>
+                        </div>
+                    </div>
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</main>
+{{ end }}
