@@ -1,0 +1,36 @@
+{{ define "main" }}
+<main role="main" class="container" id="page-index">
+    <div class="row">
+        <div class="col">
+            <h2 class="text-center pt-4">My Fitbit Apps</h2>
+        </div>
+    </div>
+    <div class="row pt-3">
+        <div class="offset-lg-2"></div>
+        {{ range .Pages }}
+            <div class="col-sm col-lg-4 mb-4">
+                <div class="card h-100">
+                    <a class="card-main h-100" href="{{ .URL | absURL }}">
+                        <img src="{{ .Params.image | absURL }}" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <div>{{ .Name }}</div>
+                                <span class="badge badge-info mt-2">{{ .Params.type }}</span>
+                            </h5>
+                            <p class="card-text">{{ .Params.description }}</p>
+                        </div>
+                        <div class="card-body card-ul">
+                            <ul>
+                                {{ range .Params.description_list }}
+                                    <li>{{ . }}</li>
+                                {{ end }}  
+                            </ul>
+                        </div>
+                    </a>
+                    <a href="{{ .Params.download_link }}" class="btn btn-light">View in Fitbit Gallery</a>
+                </div>
+            </div>
+        {{ end }}   
+    </div>
+</main>
+{{ end }}

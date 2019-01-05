@@ -1,0 +1,47 @@
+$enable-rounded: false;
+@import "../../node_modules/bootstrap/scss/bootstrap";
+#page-index {
+    .badge {
+        font-weight: 400;
+    }
+    .card-main {
+        color: #212529;
+        &:hover {
+            color: #212529;
+            text-decoration: none;
+        }
+    }
+    .card {
+        @include transition($btn-transition);
+        &:hover {
+            box-shadow: 0 0.5rem 1rem rgba(0,0,0,.175);
+        }
+        .btn {
+            border-bottom: none;
+            &:hover {
+                border-bottom: none;
+            }
+        }
+    }
+    .card-img-top {
+        background: #f8f9fa;
+        border-bottom: 1px solid #f8f9fa;
+    }
+    .card-ul {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    ul {
+        padding-inline-start: 1.5em;
+        margin-bottom: 1.25em;
+    }
+    h2 {
+        font-weight: 300;
+    }
+}
+a {
+    @include transition($btn-transition);
+    &:hover {
+        text-decoration: none;
+    }
+}

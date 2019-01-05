@@ -1,0 +1,5 @@
+baseURL = "https://apps.mxshao.com"
+languageCode = "en-us"
+title = "apps.mxshao.com"
+disableHugoGeneratorInject = true
+disableKinds = ["taxonomy", "taxonomyTerm", "RSS", "sitemap"]
