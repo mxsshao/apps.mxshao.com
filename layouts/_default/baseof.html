@@ -15,24 +15,19 @@
 
 <body>
     {{ block "nav" . }}
-    <nav class="navbar navbar-expand-md navbar-light bg-light static-top">
-        <div class="container">
-            <a class="navbar-brand" href='{{ "" | absURL }}'>MXSHAO Apps</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Apps</a>
-                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown01">
-                                {{ range .Site.Menus.apps }}
-                                <a class="dropdown-item" href="{{ .URL | absURL }}">{{.Name}}</a>
-                          {{ end }}   
-                        </div>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark static-top">
+        <a class="navbar-brand" href='{{ "" | absURL }}'>MXSHAO Apps</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav ml-auto">
+                {{ range .Site.Menus.apps }}
+                    <li class='nav-item {{ if (or ($.IsMenuCurrent "apps" . ) ($.HasMenuCurrent "apps" . )) }}active{{ end }}'>
+                        <a class="nav-link" href="{{ .URL | absURL }}">{{ .Name }}</a>
                     </li>
-                </ul>
-            </div>
+                {{ end }} 
+            </ul>
         </div>
     </nav>
     {{ end }}
@@ -41,7 +36,7 @@
     {{ block "footer" . }}
         <footer class="footer">
             <p class="text-center"><i class="far fa-envelope"></i> <a href="mailto:apps@mxshao.com">apps@mxshao.com</a></p>
-            <div class="text-center font-italic copyright bg-light">Copyright &copy; 2019 mxshao.com</div>
+            <div class="text-center font-italic copyright text-light bg-dark">Copyright &copy; 2019 mxshao.com</div>
         </footer>
     {{ end }}
 

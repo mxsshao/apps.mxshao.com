@@ -15,7 +15,7 @@
                         <div class="card-body">
                             <h5 class="card-title">
                                 <div>{{ .Name }}</div>
-                                <span class="badge badge-info mt-2">{{ .Params.app_type }}</span>
+                                <span class="badge badge-primary mt-2">{{ .Params.app_type }}</span>
                             </h5>
                             <p class="card-text">{{ .Params.description }}</p>
                         </div>
@@ -27,7 +27,7 @@
                             </ul>
                         </div>
                     </a>
-                    <a href="{{ .Params.download_link }}" class="btn btn-light">View in Fitbit Gallery</a>
+                    <a href="{{ .Params.download_link }}" class="btn btn-info">View in Fitbit Gallery</a>
                 </div>
             </div>
         {{ end }}   

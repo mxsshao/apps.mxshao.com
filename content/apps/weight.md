@@ -7,7 +7,8 @@
         "img/weight/versa_log.png",
         "img/weight/versa_log_weight.png",
         "img/weight/versa_log_fat.png",
-        "img/weight/versa_lbs.png"
+        "img/weight/versa_lbs.png",
+        "img/weight/weight_icon.png"
     ],
     "app_type": "App",
     "download_link": "https://gam.fitbit.com/gallery/app/087e7947-bf3d-429a-abf6-694a7dbdc060",
