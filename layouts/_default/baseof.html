@@ -2,21 +2,28 @@
 <html lang="{{ $.Lang }}">
 
 <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     {{ $style := resources.Get "scss/bootstrap.scss"  | toCSS | postCSS (dict "use" "autoprefixer") | minify | fingerprint }}
 
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.png">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <meta name="theme-color" content="#1a1a1a">
+
+    <title>{{ if .Title }}{{ .Title }}{{ else }}{{ .Site.Title }}{{ end }}</title>
+
     <link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-    <title>{{ if .Title }}{{ .Title }}{{ else }}{{ .Site.Title }}{{ end }}</title>
 </head>
 
 <body>
     {{ block "nav" . }}
     <nav class="navbar navbar-expand-md navbar-dark bg-dark static-top">
-        <a class="navbar-brand" href='{{ "" | absURL }}'>MXSHAO Apps</a>
+        <a class="navbar-brand" href='{{ "" | absURL }}'><span class="font-italic">apps </span>@ MXSHAO</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>

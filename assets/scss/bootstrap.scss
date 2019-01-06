@@ -89,8 +89,12 @@ h2 {
     font-weight: 300;
 }
 
-.navbar-brand {
+.navbar-dark .navbar-brand {
     font-weight: 300;
+    color: lighten($cyan, 35%);
+    &:hover {
+        color: lighten(lighten($cyan, 35%), 10%);
+    }
 }
 
 .footer {
