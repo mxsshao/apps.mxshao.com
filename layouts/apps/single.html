@@ -6,13 +6,13 @@
         </div>
     </div>
     <div class="row pt-4">
-        <div class="col-10 col-sm-4 col-lg-3 offset-1 offset-sm-0 mb-4">
+        <div class="col-10 col-sm-4 col-lg-3 offset-1 offset-sm-0 mb-4 pt-2">
             <div class="card">
                 <div id="carouselExampleControls" class="carousel slide card-img-top" data-ride="carousel" data-interval="3000">
                     <div class="carousel-inner">
                         {{ range $index, $value := .Params.screenshots }}
                             <div class="carousel-item {{ if (eq $index 0) }}active{{ end }}">
-                                <img src="{{ $value | absURL }}" class="card-img-top" alt="">
+                                <img src="{{ $value | absURL }}" class="img-fluid" alt="">
                             </div>
                         {{ end }}
                     </div>
@@ -31,7 +31,7 @@
             </div>
         </div>
         <div class="col col-sm-8 col-lg-9 mb-4">
-            <h3 class="text-center pb-2 pt-2">FAQ</h3>
+            <h3 class="text-center py-2">FAQ</h3>
             <div class="accordion" id="faq-accordion">
                 {{ range $index, $value := .Params.faq }}
                     <div class="card">
