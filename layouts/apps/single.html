@@ -23,7 +23,9 @@
                     </h5>
                     <p class="card-text">{{ .Params.description }}</p>
                     <p class="card-text">{{ .Params.description_extend | safeHTML }}</p>
-                    <a href="{{ .Params.github }}"><i class="fab fa-github"></i> Github</a>
+                    <div class="github-link">
+                        <i class="fab fa-github"></i> <a href="{{ .Params.github }}">Github</a>
+                    </div>
                 </div>
                 <a href="{{ .Params.download_link }}" class="btn btn-light">View in Fitbit Gallery</a>
             </div>
@@ -38,7 +40,7 @@
                         </button>
                         <div id="c-{{ $index }}" class="collapse" aria-labelledby="h-{{ $index }}" data-parent="#faq-accordion">
                             <div class="card-body">
-                                {{ .answer }}
+                                {{ .answer | safeHTML }}
                             </div>
                         </div>
                     </div>

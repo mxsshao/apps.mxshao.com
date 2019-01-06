@@ -12,7 +12,7 @@
     "app_type": "App",
     "download_link": "https://gam.fitbit.com/gallery/app/087e7947-bf3d-429a-abf6-694a7dbdc060",
     "description": "An app to log today's weight and body fat to your Fitbit profile.",
-    "description_extend": "Based on <a href=\"https://github.com/benedicteb/fitbit-log-weight\">\"log weight\"</a> by benedicteb.",
+    "description_extend": "<small class=\"text-muted\">Based on <a href=\"https://github.com/benedicteb/fitbit-log-weight\">log weight</a> by benedicteb.</small>",
     "description_list": [
         "Before first use you need to login to your Fitbit account in the settings",
         "Supports kg and lbs",
