@@ -1,0 +1,5 @@
+[submodule "public"]
+	path = public
+	url = https://github.com/mxsshao/apps.mxshao.com.git
+	branch = gh-pages
+	ignore = dirty
