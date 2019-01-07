@@ -144,7 +144,6 @@ h2 {
     }
     .card-img-top {
         background: $gray-400;
-        // border-bottom: 1px solid $gray-400;
     }
     .card-ul {
         padding-top: 0;
@@ -155,7 +154,6 @@ h2 {
 #page-single {
     .card-img-top {
         background: $gray-400;
-        // border-bottom: 1px solid #f8f9fa;
     }
     .card-body {
         padding: 0.8em;
@@ -172,7 +170,7 @@ h2 {
             }
         }
         .card-body {
-            padding: 1.25em 1em;
+            padding: 1.25em 1em 0.75em;
             p {
                 margin-bottom: 0.5em;
             }
@@ -190,4 +188,47 @@ h2 {
     .github-link {
         padding-top: 0.8em
     }
+}
+
+// Font Awesome
+.fa,
+.fas,
+.far,
+.fal,
+.fab {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+}
+
+@font-face {
+    font-family: 'Font Awesome 5 Brands';
+    font-style: normal;
+    font-weight: normal;
+    src: url("/fonts/fa-brands-400.eot");
+    src: url("/fonts/fa-brands-400.eot?#iefix") format("embedded-opentype"), url("/fonts/fa-brands-400.woff2") format("woff2"), url("/fonts/fa-brands-400.woff") format("woff"), url("/fonts/fa-brands-400.ttf") format("truetype"), url("/fonts/fa-brands-400.svg#fontawesome") format("svg");
+}
+.fab {
+    font-family: 'Font Awesome 5 Brands';
+}
+@font-face {
+    font-family: 'Font Awesome 5 Free';
+    font-style: normal;
+    font-weight: 400;
+    src: url("/fonts/fa-regular-400.eot");
+    src: url("/fonts/fa-regular-400.eot?#iefix") format("embedded-opentype"), url("/fonts/fa-regular-400.woff2") format("woff2"), url("/fonts/fa-regular-400.woff") format("woff"), url("/fonts/fa-regular-400.ttf") format("truetype"), url("/fonts/fa-regular-400.svg#fontawesome") format("svg");
+}
+.far {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 400;
+}
+.fa-envelope:before {
+    content: "\f0e0";
+}
+.fa-github:before {
+    content: "\f09b";
 }

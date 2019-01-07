@@ -20,7 +20,7 @@
     "faq": [
         {
             "question" : "How do I setup the weather function?",
-            "answer": "<ol><li>Sign up at <a href=\"https://home.openweathermap.org/users/sign_up\" target=\"_blank\">https://home.openweathermap.org/users/sign_up</a></li><li>Enter the api key they email you into the settings page.</li><li>The weather should start working within a couple hours.</li></ol>"
+            "answer": "<ol><li>Sign up at <a href=\"https://home.openweathermap.org/users/sign_up\" target=\"_blank\">https://home.openweathermap.org/users/sign_up</a></li><li>Enter the api key they email you into the settings page where it says \"API Key\".</li><li>The weather should start working within a couple hours.</li></ol>"
         },
         {
             "question" : "Why do I need to sign up for weather?",
@@ -33,6 +33,14 @@
         {
             "question" : "How do I switch between 12 and 24 hr time?",
             "answer": "<p>The clockface gets your time preference from your Fitbit account.</p><ol><li>Go to <a href=\"https://www.fitbit.com/settings/profile\" target=\"_blank\">https://www.fitbit.com/settings/profile</a></li><li>Under \"Advanced Settings\" there is a \"Clock Display Time\" setting.</li></ol>"
+        },
+        {
+            "question" : "How do I switch between celsius and fahrenheit?",
+            "answer": "<p>The option to switch between the two is in the clock settings under \"Temperature Unit\".</p>"
+        },
+        {
+            "question" : "Can I add custom colors?",
+            "answer": "<p>Unfortunately not at the moment. The color selector used on the settings page does not allow for entering custom colors. This may change if Fitbit updates their settings functionality.</p>"
         },
         {
             "question" : "My settings aren't working.",
