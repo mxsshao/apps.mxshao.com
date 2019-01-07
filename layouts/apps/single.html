@@ -5,14 +5,14 @@
             <h2 class="text-center pt-4">{{ .Title }}</h2>
         </div>
     </div>
-    <div class="row pt-4">
-        <div class="col-10 col-sm-4 col-lg-3 offset-1 offset-sm-0 mb-4 pt-2">
+    <div class="row pt-3">
+        <div class="col-8 col-sm-4 col-lg-3 offset-2 offset-sm-0 mb-4">
             <div class="card">
-                <div id="carouselExampleControls" class="carousel slide card-img-top" data-ride="carousel" data-interval="3000">
+                <div id="carousel-screenshots" class="carousel slide card-img-top" data-ride="carousel" data-interval="3000">
                     <div class="carousel-inner">
                         {{ range $index, $value := .Params.screenshots }}
                             <div class="carousel-item {{ if (eq $index 0) }}active{{ end }}">
-                                <img src="{{ $value | absURL }}" class="img-fluid" alt="">
+                                <img src="{{ $value | absURL }}" alt="" class="img-fluid">
                             </div>
                         {{ end }}
                     </div>
@@ -30,7 +30,7 @@
                 <a href="{{ .Params.download_link }}" class="btn btn-info">View in Fitbit Gallery</a>
             </div>
         </div>
-        <div class="col col-sm-8 col-lg-9 mb-4">
+        <div class="col-sm-8 col-lg-9 mb-4">
             <h3 class="text-center py-2">FAQ</h3>
             <div class="accordion" id="faq-accordion">
                 {{ range $index, $value := .Params.faq }}
