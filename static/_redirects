@@ -1,2 +1,2 @@
 # Redirect default Netlify subdomain to primary domain
-http://mxshao-apps.netlify.com/* http://apps.mxshao.com/:splat 301!
+https://mxshao-apps.netlify.com/* https://apps.mxshao.com/:splat 301!
